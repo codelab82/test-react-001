@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.input-number{
+  width: 60%;
+  height: 50px;
+  margin-top: 20px;
+}
+.otp-btn{
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
+}
+.otp-btn:hover{
+  color: dodgerblue;
+  background-color: white;
+}
