@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Otp = () => {
 
+  useEffect(()=> {
     if ('OTPCredential' in window) { 
+      window.addEventListener('DOMContentLoaded', e => {
+        const ac = new AbortController();
+        navigator.credentials.get({
+          otp: { transport:['sms'] },
+          signal: ac.signal
+        }).then(otp => {
+          alert(otp.code)
+        }).catch(err => {
+          alert(err)
+        });
+      })
+    }
+  }, [])
+
+    /* if ('OTPCredential' in window) { 
         window.addEventListener('DOMContentLoaded', e => {
           const ac = new AbortController();
           navigator.credentials.get({
@@ -16,7 +32,7 @@ const Otp = () => {
         })
       } else {
         alert('WebOTP not supported!.')
-      }
+      } */
 
     return (
         <form action="/verify-otp" method="POST">
