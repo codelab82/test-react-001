@@ -9,6 +9,8 @@ const App = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Otp />
+        <br/>
+        <input type="file" multiple accept="image/*" />
       </header>
     </div>
   );
