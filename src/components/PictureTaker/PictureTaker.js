@@ -22,8 +22,8 @@ export default function PictureTaker() {
         <div>
         <input accept="image/*" id="icon-button-file" type="file" capture="environment" onChange={(e) => handleCapture(e.target)}/>
         <div>
-            <label>{imgURL}</label>
-            <img alt="preview" src={imgURL} style={{"maxWidth":"240px"}} />
+            {imgURL ? <><label>{imgURL}</label>
+            <img alt="preview" src={imgURL} style={{"maxWidth":"240px"}} /></> : null}
         </div>
         <div>
             <div>{targetDebug}</div>
