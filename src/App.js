@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Otp from './Otp';
+import PictureTaker from './components/PictureTaker/PictureTaker';
 
 const App = () => {
 
@@ -13,7 +14,7 @@ const App = () => {
         <input type="file" multiple accept="image/*" />
         <br/>
         <br/>
-        <input accept="image/*" id="icon-button-file" type="file" capture="environment"/>
+        <PictureTaker />
       </header>
     </div>
   );
