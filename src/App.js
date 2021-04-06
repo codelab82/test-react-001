@@ -11,6 +11,9 @@ const App = () => {
         <Otp />
         <br/>
         <input type="file" multiple accept="image/*" />
+        <br/>
+        <br/>
+        <input accept="image/*" id="icon-button-file" type="file" capture="environment"/>
       </header>
     </div>
   );
