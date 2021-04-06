@@ -4,8 +4,10 @@ import { useState } from "react";
 export default function PictureTaker() {
 
     const [imgURL, setImgURL] = useState(null);
+    const [targetDebug, setTargetDebug] = useState(null);
 
     const handleCapture = (target) => {
+        setTargetDebug(JSON.stringify(target))
         if (target.files) {
           if (target.files.length !== 0) {
             const file = target.files[0];
@@ -22,6 +24,9 @@ export default function PictureTaker() {
         <div>
             <label>{imgURL}</label>
             <img src={imgURL} style="max-width:240px" />
+        </div>
+        <div>
+            <div>{targetDebug}</div>
         </div>
         </div>
     );
