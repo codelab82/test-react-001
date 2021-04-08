@@ -1,0 +1,39 @@
+.container{
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding: 0 50px;
+}
+.jMdbjj{
+    margin-top: 30px;
+}
+.dlCwbQ{
+    font-size: 1.5em;
+}
+.plot{
+    box-sizing: border-box;
+    padding: 20px 0px 20px 110px;
+}
+.data-table-extensions > .data-table-extensions-filter > .filter-text{
+    font-size: 1.5em;
+    margin-top: 5px;
+}
+.data-table-extensions > .data-table-extensions-filter > .icon{
+    width: 40px!important;
+    height: 48px!important;
+    background-size: 40px;
+}
+.data-table-extensions > .data-table-extensions-action > button.download{
+    background-size: 50px;
+}
+.data-table-extensions > .data-table-extensions-action > button{
+    width: 40px!important;
+    height: 48px!important;
+}
+.toggle-btn{
+    cursor: pointer;
+    background-color: dodgerblue;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+}

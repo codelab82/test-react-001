@@ -1,21 +1,23 @@
 import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 import Otp from './Otp';
 import PictureTaker from './components/PictureTaker/PictureTaker';
+import DataTableComponent from './components/DataTableComponent/DataTableComponent';
 
 const App = () => {
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> 
         <Otp />
         <br/>
         <input type="file" multiple accept="image/*" />
         <br/>
         <br/>
-        <PictureTaker />
+        <PictureTaker /> */}
       </header>
+      <DataTableComponent/>
     </div>
   );
 }
