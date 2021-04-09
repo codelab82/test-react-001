@@ -86,9 +86,9 @@ const DataTableComponent = () => {
       const ExpandableComponent = ( {data} ) => <div className="plot">{data.car_id.car_type_id.name} - {data.car_id.name}</div>
     
       const contextMessage = {
-          singular: 'elemento',
-          plural: 'elementi',
-          message: 'selezionati'
+          singular: 'elemento selezionato',
+          plural: 'elementi selezionati',
+           
         };
 
       const paginationComponentOptions = {
@@ -116,21 +116,21 @@ const DataTableComponent = () => {
                 paginationComponentOptions={paginationComponentOptions}
             />
             </DataTableExtensions>
-            <input type="checkbox" checked={checkTipo} onClick={() => {setHideTipo(!hideTipo); setcheckTipo(!checkTipo)}}/>
+            <input type="checkbox" checked={checkTipo} onChange={() => {setHideTipo(!hideTipo); setcheckTipo(!checkTipo)}}/>
             <label>Tipo</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" checked={checkNumPratica} onClick={() => {setHideNumPratica(!hideNumPratica); setcheckNumPratica(!checkNumPratica)}}/>
+            <input type="checkbox" checked={checkNumPratica} onChange={() => {setHideNumPratica(!hideNumPratica); setcheckNumPratica(!checkNumPratica)}}/>
             <label>Num. Pratica</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" checked={checkConvenzione} onClick={() => {setHideConvenzione(!hideConvenzione); setcheckConvenzione(!checkConvenzione)}}/>
+            <input type="checkbox" checked={checkConvenzione} onChange={() => {setHideConvenzione(!hideConvenzione); setcheckConvenzione(!checkConvenzione)}}/>
             <label>Convenzione</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" checked={checkProdotto} onClick={() => {setHideProdotto(!hideProdotto); setcheckProdotto(!checkProdotto)}}/>
+            <input type="checkbox" checked={checkProdotto} onChange={() => {setHideProdotto(!hideProdotto); setcheckProdotto(!checkProdotto)}}/>
             <label>Prodotto</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" checked={checkScadenza} onClick={() => {setHideScadenza(!hideScadenza); setcheckScadenza(!checkScadenza)}}/>
+            <input type="checkbox" checked={checkScadenza} onChange={() => {setHideScadenza(!hideScadenza); setcheckScadenza(!checkScadenza)}}/>
             <label>Scadenza</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" checked={checkNome} onClick={() => {setHideNome(!hideNome); setcheckNome(!checkNome)}}/>
+            <input type="checkbox" checked={checkNome} onChange={() => {setHideNome(!hideNome); setcheckNome(!checkNome)}}/>
             <label>Nome</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" checked={checkCognome} onClick={() => {setHideCognome(!hideCognome); setcheckCognome(!checkCognome)}}/>
+            <input type="checkbox" checked={checkCognome} onChange={() => {setHideCognome(!hideCognome); setcheckCognome(!checkCognome)}}/>
             <label>Cognome</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" checked={checkDenominazione} onClick={() => {setHideDenominazione(!hideDenominazione); setcheckDenominazione(!checkDenominazione)}}/>
+            <input type="checkbox" checked={checkDenominazione} onChange={() => {setHideDenominazione(!hideDenominazione); setcheckDenominazione(!checkDenominazione)}}/>
             <label>Denominazione</label>&nbsp;&nbsp;&nbsp;
         </div>
     )
