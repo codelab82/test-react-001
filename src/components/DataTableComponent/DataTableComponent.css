@@ -37,3 +37,57 @@
     border-radius: 5px;
     font-size: 1.2em;
 }
+.rdt_TableHeadRow{         /* SFONDO HEAD */
+    background-color: #288EAF!important;
+}
+.zmfZH{         /* TESTO HEAD */
+    color: white!important;
+    font-size: 1.2em!important;
+    font-weight: bold!important;
+}
+.rdt_TableRow{         /* TESTO ROW */
+    font-size: 1.1em!important;
+}
+  /* PAGINATION */
+.cGNhty, .cfkvxw, .gFRdFJ{       
+    font-size: 1.4em!important;
+}
+.iGaJpU {
+   min-width: 34px!important;
+}
+.conf-col{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(40, 142, 175);
+	color: rgb(255, 255, 255);
+}
+.flex-row{
+    display: flex;
+    justify-content: space-around;
+}
+.pratica-col,.cliente-col,.vettura-col,.finanziamento-col{
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.btn{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    background-color: rgb(40, 142, 175);
+	color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+.btn-disable{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    background-color: rgb(233, 233, 233);
+	color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
