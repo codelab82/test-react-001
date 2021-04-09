@@ -8,14 +8,22 @@ import "react-data-table-component-extensions/dist/index.css";
 const DataTableComponent = () => {
 
     const [hideTipo, setHideTipo] = useState(false),
+          [checkTipo, setcheckTipo] = useState(true),
           [hideNumPratica, setHideNumPratica] = useState(false),
+          [checkNumPratica, setcheckNumPratica] = useState(true),
           [hideConvenzione, setHideConvenzione] = useState(false),
+          [checkConvenzione, setcheckConvenzione] = useState(true),
           [hideProdotto, setHideProdotto] = useState(false),
+          [checkProdotto, setcheckProdotto] = useState(true),
           [hideScadenza, setHideScadenza] = useState(false),
+          [checkScadenza, setcheckScadenza] = useState(true),
           [hideNome, setHideNome] = useState(false),
+          [checkNome, setcheckNome] = useState(true),
           [hideCognome, setHideCognome] = useState(false),
-          [hideDenominazione, setHideDenominazione] = useState(false);
-    
+          [checkCognome, setcheckCognome] = useState(true),
+          [hideDenominazione, setHideDenominazione] = useState(false),
+          [checkDenominazione, setcheckDenominazione] = useState(true);
+
     const columns = [
         {
           name: 'Tipo',
@@ -31,13 +39,13 @@ const DataTableComponent = () => {
       },
         {
           name: 'Convenzione',
-          selector: (row, index) => {return row.agreement_id ? row.agreement_id.code : "NULL";}, //'product_id.name',
+          selector: 'agreement_id.code',
           sortable: true,
           omit: hideConvenzione
         },
         {
           name: 'Prodotto',
-          selector: (row, index) => {return row.product_id ? row.product_id.name : "NULL";}, //'product_id.name',
+          selector: 'product_id.name',
           sortable: true,
           omit: hideProdotto
         },
@@ -49,19 +57,19 @@ const DataTableComponent = () => {
         },
         {
           name: 'Nome',
-          selector: (row, index) => {return row.customer_id?.registry?.length ? row.customer_id.registry[0].nome : "NULL";}, 
+          selector: 'customer_id.registry[0].nome', 
           sortable: true,
           omit: hideNome
         },
         {
           name: 'Cognome',
-          selector: (row, index) => {return row.customer_id?.registry?.length ? row.customer_id.registry[0].cognome : "NULL";}, 
+          selector: 'customer_id.registry[0].cognome', 
           sortable: true,
           omit: hideCognome
         },
         {
           name: 'Denominazione',
-          selector: (row, index) => {return row.customer_id?.registry?.length ? row.customer_id.registry[0].denominazione : "NULL";}, 
+          selector: 'customer_id.registry[0].denominazione', 
           sortable: true,
           omit: hideDenominazione
         },
@@ -77,37 +85,52 @@ const DataTableComponent = () => {
 
       const ExpandableComponent = ( {data} ) => <div className="plot">{data.car_id.car_type_id.name} - {data.car_id.name}</div>
     
-     
+      const contextMessage = {
+          singular: 'elemento',
+          plural: 'elementi',
+          message: 'selezionati'
+        };
+
+      const paginationComponentOptions = {
+          rowsPerPageText: 'Righe per pagina.',
+          rangeSeparatorText: 'di',
+          noRowsPerPage: false,
+          selectAllRowsItem: false,
+          selectAllRowsItemText: 'Tutte'
+      };
     
     return(
         <div className="container">
             <DataTableExtensions {...tableData}>      
             <DataTable 
+                id="language"
                 className="table"
-                title="Movie"
+                title="Proposte"
                 columns={columns}
                 data={data}
                 pagination
                 expandableRows
                 expandableRowsComponent={<ExpandableComponent/>}
                 selectableRows
+                contextMessage={contextMessage}
+                paginationComponentOptions={paginationComponentOptions}
             />
             </DataTableExtensions>
-            <input type="checkbox" onClick={() => setHideTipo(!hideTipo)}/>
+            <input type="checkbox" checked={checkTipo} onClick={() => {setHideTipo(!hideTipo); setcheckTipo(!checkTipo)}}/>
             <label>Tipo</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" onClick={() => setHideNumPratica(!hideNumPratica)}/>
+            <input type="checkbox" checked={checkNumPratica} onClick={() => {setHideNumPratica(!hideNumPratica); setcheckNumPratica(!checkNumPratica)}}/>
             <label>Num. Pratica</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" onClick={() => setHideConvenzione(!hideConvenzione)}/>
+            <input type="checkbox" checked={checkConvenzione} onClick={() => {setHideConvenzione(!hideConvenzione); setcheckConvenzione(!checkConvenzione)}}/>
             <label>Convenzione</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" onClick={() => setHideProdotto(!hideProdotto)}/>
+            <input type="checkbox" checked={checkProdotto} onClick={() => {setHideProdotto(!hideProdotto); setcheckProdotto(!checkProdotto)}}/>
             <label>Prodotto</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" onClick={() => setHideScadenza(!hideScadenza)}/>
+            <input type="checkbox" checked={checkScadenza} onClick={() => {setHideScadenza(!hideScadenza); setcheckScadenza(!checkScadenza)}}/>
             <label>Scadenza</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" onClick={() => setHideNome(!hideNome)}/>
+            <input type="checkbox" checked={checkNome} onClick={() => {setHideNome(!hideNome); setcheckNome(!checkNome)}}/>
             <label>Nome</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" onClick={() => setHideCognome(!hideCognome)}/>
+            <input type="checkbox" checked={checkCognome} onClick={() => {setHideCognome(!hideCognome); setcheckCognome(!checkCognome)}}/>
             <label>Cognome</label>&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" onClick={() => setHideConvenzione(!hideConvenzione)}/>
+            <input type="checkbox" checked={checkDenominazione} onClick={() => {setHideDenominazione(!hideDenominazione); setcheckDenominazione(!checkDenominazione)}}/>
             <label>Denominazione</label>&nbsp;&nbsp;&nbsp;
         </div>
     )

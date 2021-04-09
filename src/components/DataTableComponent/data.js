@@ -1,3 +1,46 @@
+// export const columns = [
+//    {
+//      name: 'Tipo',
+//      selector: 'ocs_type',
+//      sortable: true
+//    },
+//  {
+//    name: 'Num. Pratica',
+//    selector: 'id',
+//    sortable: true
+//  },
+//    {
+//      name: 'Convenzione',
+//      selector: (row, index) => {return row.agreement_id ? row.agreement_id.code : "NULL";}, //'product_id.name',
+//      sortable: true
+//    },
+//    {
+//      name: 'Prodotto',
+//      selector: (row, index) => {return row.product_id ? row.product_id.name : "NULL";}, //'product_id.name',
+//      sortable: true
+//    },
+//    {
+//      name: 'Scadenza',
+//      selector: 'data_scadenza',
+//      sortable: true
+//    },
+//    {
+//      name: 'Nome',
+//      selector: (row, index) => {return row.customer_id?.registry?.length ? row.customer_id.registry[0].nome : "NULL";}, 
+//      sortable: true
+//    },
+//    {
+//      name: 'Cognome',
+//      selector: (row, index) => {return row.customer_id?.registry?.length ? row.customer_id.registry[0].cognome : "NULL";}, 
+//      sortable: true
+//    },
+//    {
+//      name: 'Denominazione',
+//      selector: (row, index) => {return row.customer_id?.registry?.length ? row.customer_id.registry[0].denominazione : "NULL";}, 
+//      sortable: true
+//    },
+//  ];
+
 export const data =   [
   {
      "id":3199284,
