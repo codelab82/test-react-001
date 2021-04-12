@@ -36,6 +36,27 @@ const DataTableComponent = () => {
             [hideFinanziato, setHideFinanziato] = useState(true),
             [hideAcconto, setHideAcconto] = useState(true),
             [hideRataFinale, setHideRataFinale] = useState(true);
+        
+            const getStatoPraticaLabel = (value) => {
+                var arrayListe = {
+                  '0': 'Da Firmare',
+                  '1': 'Attesa Documentazione',
+                  '2': 'Verifica Documentale',
+                  '3': 'Anomalie Formali',
+                  '4': 'Istruttoria',
+                  '5': 'Sospesa',
+                  '6': 'Deliberata',
+                  '7': 'Da Liquidare',
+                  '8': 'Liquidata',
+                  '9': 'Respinta',
+                  '10': 'Annullata',
+                  '11': 'Scaduta',
+                  '12': 'Chiusa',
+                  '13': 'Da Liquidare non sospesa',
+                  '14': 'Da Liquidare sospesa'
+                };
+                return arrayListe[value];
+              }
 
 
     const columns = [
@@ -77,7 +98,9 @@ const DataTableComponent = () => {
         },
         {
             name: 'Stato Pratica',
-            selector: 'cwf_id',
+            selector: (row, index) => { return getStatoPraticaLabel(row.cwf_id); },
+            cellExport: (row) => { return getStatoPraticaLabel(row.cwf_id); },
+            //selector: 'cwf_id',
             sortable: true,
             omit: hideStatoPratica
         },
@@ -155,43 +178,43 @@ const DataTableComponent = () => {
         },
         {
             name: 'Targa',
-            selector:'targa',
+            selector:'offerdetail[0].targa',
             sortable: true,
             omit: hideTarga
         },
         {
             name: 'Telaio',
-            selector:'telaio',
+            selector:'offerdetail[0].telaio',
             sortable: true,
             omit: hideTelaio
         },
         {
             name: 'Stato Vettura',
-            selector:'stato_auto',
+            selector:'offerdetail[0].stato_auto',
             sortable: true,
             omit: hideStatoVettura
         },
         {
             name: 'Rate',
-            selector:'offerdetail.numero_rate',
+            selector:'offerdetail[0].numero_rate',
             sortable: true,
             omit: hideRate
         },
         {
             name: 'Finanziato',
-            selector:'finanziato_totale',
+            selector:'offerdetail[0].finanziato_totale',
             sortable: true,
             omit: hideFinanziato
         },
         {
             name: 'Acconto',
-            selector:'acconto',
+            selector:'offerdetail[0].acconto',
             sortable: true,
             omit: hideAcconto
         },
         {
             name: 'Rata Finale',
-            selector:'maxirata',
+            selector:'offerdetail[0].maxirata',
             sortable: true,
             omit: hideRataFinale
         },
@@ -249,41 +272,41 @@ const DataTableComponent = () => {
                 <div className="flex-row">
                     <div className="pratica-col">
                         <h3>Pratica</h3>
-                        <div className="btn" onClick={() => setHideTipo(!hideTipo)}>Tipo</div>
-                        <div className="btn" onClick={() => setHideNumero(!hideNumero)}>Numero</div>
-                        <div className="btn" onClick={() => setHideBrand(!hideBrand)}>Brand</div>
-                        <div className="btn" onClick={() => setHideConvenzione(!hideConvenzione)}>Convenzione</div>
-                        <div className="btn" onClick={() => setHideCodice(!hideCodice)}>Codice Prodotto</div>
-                        <div className="btn" onClick={() => setHideNomeProdotto(!hideNomeProdotto)}>Nome Prodotto</div>
-                        <div className="btn" onClick={() => setHideStatoPratica(!hideStatoPratica)}>Stato Pratica</div>
-                        <div className="btn" onClick={() => setHideScadenza(!hideScadenza)}>Scadenza</div>
-                        <div className="btn" onClick={() => setHideLiquidazione(!hideLiquidazione)}>Liquidazione</div>
-                        <div className="btn" onClick={() => setHideInScadenza(!hideInScadenza)}>In Scadenza</div>
-                        <div className="btn" onClick={() => setHideTCM(!hideTCM)}>TCM SI/NO</div>
+                        <div className={hideTipo ? 'btn-disable' : 'btn'} onClick={() => setHideTipo(!hideTipo)}>Tipo</div>
+                        <div className={hideNumero ? 'btn-disable' : 'btn'} onClick={() => setHideNumero(!hideNumero)}>Numero</div>
+                        <div className={hideBrand ? 'btn-disable' : 'btn'} onClick={() => setHideBrand(!hideBrand)}>Brand</div>
+                        <div className={hideConvenzione ? 'btn-disable' : 'btn'} onClick={() => setHideConvenzione(!hideConvenzione)}>Convenzione</div>
+                        <div className={hideCodice ? 'btn-disable' : 'btn'} onClick={() => setHideCodice(!hideCodice)}>Codice Prodotto</div>
+                        <div className={hideNomeProdotto ? 'btn-disable' : 'btn'} onClick={() => setHideNomeProdotto(!hideNomeProdotto)}>Nome Prodotto</div>
+                        <div className={hideNomeProdotto ? 'btn-disable' : 'btn'} onClick={() => setHideStatoPratica(!hideStatoPratica)}>Stato Pratica</div>
+                        <div className={hideScadenza ? 'btn-disable' : 'btn'} onClick={() => setHideScadenza(!hideScadenza)}>Scadenza</div>
+                        <div className={hideLiquidazione ? 'btn-disable' : 'btn'} onClick={() => setHideLiquidazione(!hideLiquidazione)}>Liquidazione</div>
+                        <div className={hideInScadenza ? 'btn-disable' : 'btn'} onClick={() => setHideInScadenza(!hideInScadenza)}>In Scadenza</div>
+                        <div className={hideTCM ? 'btn-disable' : 'btn'} onClick={() => setHideTCM(!hideTCM)}>TCM SI/NO</div>
                     </div>
                     <div className="cliente-col">
                         <h3>Cliente</h3>
-                        <div className="btn" onClick={() => setHideNome(!hideNome)}>Nome</div>
-                        <div className="btn" onClick={() => setHideCognome(!hideCognome)}>Cognome</div>
-                        <div className="btn" onClick={() => setHideDenominazione(!hideDenominazione)}>Denominazione</div>
-                        <div className="btn" onClick={() => setHideCF(!hideCF)}>Codice Fiscale</div>
-                        <div className="btn" onClick={() => setHidePIVA(!hidePIVA)}>Partita Iva</div>
+                        <div className={hideNome ? 'btn-disable' : 'btn'} onClick={() => setHideNome(!hideNome)}>Nome</div>
+                        <div className={hideCognome ? 'btn-disable' : 'btn'} onClick={() => setHideCognome(!hideCognome)}>Cognome</div>
+                        <div className={hideDenominazione ? 'btn-disable' : 'btn'} onClick={() => setHideDenominazione(!hideDenominazione)}>Denominazione</div>
+                        <div className={hideCF ? 'btn-disable' : 'btn'} onClick={() => setHideCF(!hideCF)}>Codice Fiscale</div>
+                        <div className={hidePIVA ? 'btn-disable' : 'btn'} onClick={() => setHidePIVA(!hidePIVA)}>Partita Iva</div>
                     </div>
                     <div className="vettura-col">
                         <h3>Vettura</h3>
-                        <div className="btn" onClick={() => setHideMarca(!hideMarca)}>Marca</div>
-                        <div className="btn" onClick={() => setHideModello(!hideModello)}>Modello</div>
-                        <div className="btn" onClick={() => setHideCilindrata(!hideCilindrata)}>Cilindrata</div>
-                        <div className="btn" onClick={() => setHideTarga(!hideTarga)}>Targa</div>
-                        <div className="btn" onClick={() => setHideTelaio(!hideTelaio)}>Telaio</div>
-                        <div className="btn" onClick={() => setHideStatoVettura(!hideStatoVettura)}>Stato Vettura</div>
+                        <div className={hideMarca ? 'btn-disable' : 'btn'} onClick={() => setHideMarca(!hideMarca)}>Marca</div>
+                        <div className={hideModello ? 'btn-disable' : 'btn'} onClick={() => setHideModello(!hideModello)}>Modello</div>
+                        <div className={hideCilindrata ? 'btn-disable' : 'btn'} onClick={() => setHideCilindrata(!hideCilindrata)}>Cilindrata</div>
+                        <div className={hideTarga ? 'btn-disable' : 'btn'} onClick={() => setHideTarga(!hideTarga)}>Targa</div>
+                        <div className={hideTelaio ? 'btn-disable' : 'btn'} onClick={() => setHideTelaio(!hideTelaio)}>Telaio</div>
+                        <div className={hideStatoVettura ? 'btn-disable' : 'btn'} onClick={() => setHideStatoVettura(!hideStatoVettura)}>Stato Vettura</div>
                     </div>
                     <div className="finanziamento-col">
                         <h3>Finanziamento</h3>
-                        <div className="btn" onClick={() => setHideRate(!hideRate)}>Rate</div>
-                        <div className="btn" onClick={() => setHideFinanziato(!hideFinanziato)}>Finanaziato</div>
-                        <div className="btn" onClick={() => setHideAcconto(!hideAcconto)}>Acconto</div>
-                        <div className="btn" onClick={() => setHideRataFinale(!hideRataFinale)}>Rata Finale</div>
+                        <div className={hideRate ? 'btn-disable' : 'btn'} onClick={() => setHideRate(!hideRate)}>Rate</div>
+                        <div className={hideFinanziato ? 'btn-disable' : 'btn'} onClick={() => setHideFinanziato(!hideFinanziato)}>Finanaziato</div>
+                        <div className={hideAcconto ? 'btn-disable' : 'btn'} onClick={() => setHideAcconto(!hideAcconto)}>Acconto</div>
+                        <div className={hideRataFinale ? 'btn-disable' : 'btn'} onClick={() => setHideRataFinale(!hideRataFinale)}>Rata Finale</div>
                         
                     </div>
                 </div>
