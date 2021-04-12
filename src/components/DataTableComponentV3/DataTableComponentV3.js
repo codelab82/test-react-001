@@ -252,7 +252,7 @@ function ColumnPanel({enabledColumns, toggleColumn}) {
 
 function ColumnButton({name, enabled, toggleHandler}) {
   return (
-    <div className={"btn" + (enabled ? " selected" : "")} onClick={toggleHandler}>{name}</div>
+    <div className={"btnV3" + (enabled ? " selected" : "")} onClick={toggleHandler}>{name}</div>
   )
 }
 
