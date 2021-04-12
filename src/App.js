@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import Otp from './Otp';
 import PictureTaker from './components/PictureTaker/PictureTaker';
 import DataTableComponent from './components/DataTableComponent/DataTableComponent';
+import DataTableComponentV3 from './components/DataTableComponentV3/DataTableComponentV3';
 
 const App = () => {
 
