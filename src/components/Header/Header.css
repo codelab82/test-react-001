@@ -1,0 +1,14 @@
+.breadcrumbs{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+.step-number-check{
+    padding: 8px 10px;
+    margin-right: 10px;
+}
+.step-number{
+    padding: 8px 14px;
+    margin-right: 10px;
+}

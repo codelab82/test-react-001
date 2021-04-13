@@ -1,0 +1,22 @@
+.img{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+.icona{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.info-text{
+    font-size: 0.9em;
+}
+.box{
+    position: relative;
+}
+.logo-payperdrive{
+    width: 15%;
+    position: absolute;
+    left: 200px;
+    top: 45px;
+}
