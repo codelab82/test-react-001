@@ -3,6 +3,9 @@ input:focus, select:focus{
     -webkit-appearance:none;
     box-shadow: none !important; 
 }
+.text-color{
+    color:#2e8eae;
+}
 .fa-info-circle{
     font-size: 2em;
 }

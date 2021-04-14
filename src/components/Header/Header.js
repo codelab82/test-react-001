@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
     return (
         <>
-            <div className="wrapper d-none d-lg-block border-bottom">
+            <div className="wrapper d-none d-lg-block border-bottom mb-4">
                 <div className="container">
                     <div className="step">
                         <ul className="breadcrumbs">

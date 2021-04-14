@@ -69,6 +69,8 @@ const DatiRichiedente = () => {
     }
 
     return (
+        <>
+        <h5 className="mb-4 border-bottom pb-2 text-color">Dati del richiedente</h5>
         <form>
             <div className="form-group row justify-content-between">
                 <div className="col-6">
@@ -153,6 +155,7 @@ const DatiRichiedente = () => {
                 </div>
             </div>
         </form >
+        </>
     )
 }
 

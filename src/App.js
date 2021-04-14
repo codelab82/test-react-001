@@ -8,13 +8,16 @@ import DataTableComponentV3 from './components/DataTableComponentV3/DataTableCom
 import DatiRichiedente from './components/DatiRichiedente/DatiRichiedente';
 import AsideDx from './components/AsideDx/AsideDx';
 import SelAnagrafica from './components/SelAnagrafica/SelAnagrafica';
+import NavBar from './components/NavBar/NavBar';
 
 const App = () => {
 
   return (
     <div className="App">
-      <Header />
-      <div className="container">
+      <NavBar/>
+      <SelAnagrafica/>
+      {/*<div className="container">
+        <Header/>
         <div className="row justify-content-between">
             <div className="col-8" >
               <DatiRichiedente />
@@ -24,7 +27,7 @@ const App = () => {
             </div>
         </div>
       </div>
-      {/*<header className="App-header">
+      <header className="App-header">
          <img src={logo} className="App-logo" alt="logo" /> 
         <Otp />
         <br/>

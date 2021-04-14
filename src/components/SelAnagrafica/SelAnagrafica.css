@@ -1,0 +1,23 @@
+.card{
+    background-color: #F0F0F0;
+    text-align: center;
+    border-radius: 10px;
+    border:none;
+}
+.card:hover{
+    box-shadow: 2px 2px 2px #707070 ;
+}
+.fa-user, .fa-briefcase, .fa-industry{
+    font-size: 3em;
+    color: #2e8eae;
+}
+.card-title{
+    color: #2e8eae;
+}
+.fa-arrow-right{
+    font-size: 2em;
+    color: #2e8eae; 
+}
+.fa-arrow-right:hover{
+    color: #707070; 
+}
