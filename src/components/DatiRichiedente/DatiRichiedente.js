@@ -14,6 +14,7 @@ const DatiRichiedente = () => {
     const [isActiveCell, setIsActiveCell] = useState(false);
     const [isActiveEmail, setIsActiveEmail] = useState(false);
     const [isActiveSoggiorno, setIsActiveSoggiorno] = useState(false);
+    const [isActiveSesso, setIsActiveSesso] = useState(false);
 
     const [cognome, setCognome] = useState('');
     const [nome, setNome] = useState('');
@@ -25,6 +26,7 @@ const DatiRichiedente = () => {
     const [cell, setCell] = useState('');
     const [email, setEmail] = useState('');
     const [soggiorno, setSoggiorno] = useState('');
+    const [sesso, setSesso] = useState('');
 
     const onChangeCognome = (value) => {
         setCognome(value);
@@ -67,94 +69,97 @@ const DatiRichiedente = () => {
         setEmail(value);
         value !== '' ? setIsActiveEmail(true) : setIsActiveEmail(false);
     }
+    const onChangeSesso = (value) => {
+        setSesso(value);
+        value !== '' ? setIsActiveSesso(true) : setIsActiveSesso(false);
+    }
 
     return (
         <>
-        <h5 className="mb-4 border-bottom pb-2 text-color">Dati del richiedente</h5>
-        <form>
-            <div className="form-group row justify-content-between">
-                <div className="col-6">
-                    <input type="text" className="form-control" value={cognome} onChange={(e)=>onChangeCognome(e.target.value)}/>
-                    <label className={ isActiveCognome ? 'active' : ''}>Cognome *</label>
-                </div>
-                <div className=" col-6">
-                    <input type="text" className="form-control" value={nome} onChange={(e)=>onChangeNome(e.target.value)}/>
-                    <label className={ isActiveNome ? 'active' : ''}>Nome *</label>
-                </div>
-            </div><br/>
-            <div className="form-group row justify-content-between">
-                <div className=" col-6">
-                <input type="text" className="form-control" value={data} onChange={(e)=>onChangeData(e.target.value)}/>
-                    <label className={ isActiveData ? 'active' : ''}>Data di nascita *</label>
-                </div>
-                <div className="form-group col-6">
-                    <select className="form-control" id="exampleFormControlSelect1">
-                        <option>Sesso *</option>
-                        <option>Maschio</option>
-                        <option>Femmina</option>
-                    </select>
-                </div>
-            </div><br/>
-            <div className="form-group row justify-content-between">
-                <div className=" col-6">
-                <input type="text" className="form-control" value={cittadinanza} onChange={(e)=>onChangeCittadinanza(e.target.value)}/>
-                    <label className={ isActiveCittadinanza ? 'active' : ''}>Cittadinanza *</label>
-                </div>
-                <div className=" col-6">
-                <input type="text" className="form-control" value={soggiorno} onChange={(e)=>onChangeSoggiorno(e.target.value)}/>
-                    <label className={ isActiveSoggiorno ? 'active' : ''}>Data scadenza soggiorno *</label>
-                </div>
-            </div><br/>
-            <div className="form-group row justify-content-between">
-                <div className=" col-6">
-                <input type="text" className="form-control" value={prov} onChange={(e)=>onChangeProv(e.target.value)}/>
-                    <label className={ isActiveProv ? 'active' : ''}>Provincia di nascita *</label>
-                </div>
-                <div className=" col-6">
-                    <input type="text" className="form-control" value={comune} onChange={(e)=>onChangeComune(e.target.value)}/>
-                    <label className={ isActiveComune ? 'active' : ''}>Comune di nascita *</label>
-                </div>
-            </div><br/>
-            <div className="form-group row justify-content-between">
-                <div className=" col-6">
-                <input type="text" className="form-control" value={CF} onChange={(e)=>onChangeCF(e.target.value)}/>
-                    <label className={ isActiveCF ? 'active' : ''}>Codice Fiscale *</label>
-                </div>
-            </div><br/>
-            <div className="row alert alert-primary align-items-center my-4" role="alert">
-                <div className="col-1">
-                    <i className="fas fa-info-circle"></i>
-                </div>
-                <div className="col-11 info-text">
-                    <strong>Questi sono il numero e l'email validi e attivi per la presente proposta</strong><br />
+            <h5 className="mb-4 border-bottom pb-2 text-color">Dati del richiedente</h5>
+            <form>
+                <div className="form-group row justify-content-between">
+                    <div className="col-md-6 col-12 mb-4 mb-md-1">
+                        <input type="text" className="form-control" value={cognome} onChange={(e) => onChangeCognome(e.target.value)} />
+                        <label className={isActiveCognome ? 'active' : ''}>Cognome *</label>
+                    </div>
+                    <div className=" col-md-6 col-12 mb-3 mb-md-1">
+                        <input type="text" className="form-control" value={nome} onChange={(e) => onChangeNome(e.target.value)} />
+                        <label className={isActiveNome ? 'active' : ''}>Nome *</label>
+                    </div>
+                </div><br className="d-md-block d-none" />
+                <div className="form-group row justify-content-between">
+                    <div className=" col-md-6 col-12 mb-4 mb-md-1">
+                        <input type="text" className="form-control" value={data} onChange={(e) => onChangeData(e.target.value)} />
+                        <label className={isActiveData ? 'active' : ''}>Data di nascita *</label>
+                    </div>
+                    <div className="form-group col-md-6 col-12 mb-3 mb-md-1">
+                        <select className="form-control" id="exampleFormControlSelect1" value={sesso} onChange={(e) => onChangeSesso(e.target.value)} >
+                            <option></option>
+                            <option>Maschio</option>
+                            <option>Femmina</option>
+                        </select>
+                        <label className={isActiveSesso ? 'active' : ''}>Sesso *</label>
+                    </div>
+                </div><br className="d-md-block d-none" />
+                <div className="form-group row justify-content-between">
+                    <div className=" col-md-6 col-12 mb-4 mb-md-1">
+                        <input type="text" className="form-control" value={cittadinanza} onChange={(e) => onChangeCittadinanza(e.target.value)} />
+                        <label className={isActiveCittadinanza ? 'active' : ''}>Cittadinanza *</label>
+                    </div>
+                    <div className=" col-md-6 col-12 mb-3 mb-md-1">
+                        <input type="text" className="form-control" value={soggiorno} onChange={(e) => onChangeSoggiorno(e.target.value)} />
+                        <label className={isActiveSoggiorno ? 'active' : ''}>Data scadenza soggiorno *</label>
+                    </div>
+                </div><br className="d-md-block d-none" />
+                <div className="form-group row justify-content-between">
+                    <div className=" col-md-6 col-12 mb-4 mb-md-1">
+                        <input type="text" className="form-control" value={prov} onChange={(e) => onChangeProv(e.target.value)} />
+                        <label className={isActiveProv ? 'active' : ''}>Provincia di nascita *</label>
+                    </div>
+                    <div className=" col-md-6 col-12 mb-3 mb-md-1">
+                        <input type="text" className="form-control" value={comune} onChange={(e) => onChangeComune(e.target.value)} />
+                        <label className={isActiveComune ? 'active' : ''}>Comune di nascita *</label>
+                    </div>
+                </div><br className="d-md-block d-none" />
+                <div className="form-group row justify-content-between">
+                    <div className=" col-md-6 col-12 mb-4 mb-md-1">
+                        <input type="text" className="form-control" value={CF} onChange={(e) => onChangeCF(e.target.value)} />
+                        <label className={isActiveCF ? 'active' : ''}>Codice Fiscale *</label>
+                    </div>
+                </div><br className="d-md-block d-none" />
+                <div className="row alert alert-primary align-items-center" role="alert">
+                    <div className="col-12 text-center col-lg-1">
+                        <i className="fas fa-info-circle"></i>
+                    </div>
+                    <div className="col-12 info-text col-lg-11">
+                        <strong>Questi sono il numero e l'email validi e attivi per la presente proposta</strong><br />
                         E' fondamentale che i dati indicati siano corretti, perché solo così si potrà ricevere tutte le informazioni relative al suo contratto e le credenziali per accedere al Customer
                         Service Online
                 </div>
-            </div><br/>
-            <div className="form-group row justify-content-between">
-                <div className=" col-6">
-                <input type="text" className="form-control" value={cell} onChange={(e)=>onChangeCell(e.target.value)}/>
-                    <label className={ isActiveCell ? 'active' : ''}>Cellulare *</label>
+                </div><br className="d-md-block d-none" />
+                <div className="form-group row justify-content-between">
+                    <div className=" col-md-6 col-12 mb-4 mb-md-1">
+                        <input type="text" className="form-control" value={cell} onChange={(e) => onChangeCell(e.target.value)} />
+                        <label className={isActiveCell ? 'active' : ''}>Cellulare *</label>
+                    </div>
+                    <div className=" col-md-6 col-12">
+                        <input type="text" className="form-control" value={email} onChange={(e) => onChangeEmail(e.target.value)} />
+                        <label className={isActiveEmail ? 'active' : ''}>Email *</label>
+                    </div>
                 </div>
-                <div className=" col-6">
-                <input type="text" className="form-control" value={email} onChange={(e)=>onChangeEmail(e.target.value)}/>
-                    <label className={ isActiveEmail ? 'active' : ''}>Email *</label>
+                <div className="form-group row mt-5">
+                    <p className="font-weight-bold info-text">* campi obbligatori</p>
                 </div>
-            </div>
-            <div className="form-group row mt-5">
-                <p className="font-weight-bold info-text">* campi obbligatori</p>
-            </div>
-            <div className="form-group row align-items-baseline">
-                <div className="col-5">
+                <div className="form-group row">
                     <img src={avatar} alt="avatar" className="avatar" />
                 </div>
-                <div className="col-7">
-                    <button className="btn btn-gray mr-3">SALVA PER DOPO</button>
-                    <button className="btn btn-gray mr-3">INDIETRO</button>
-                    <button className="btn btn-red px-4">AVANTI</button>
+                <div className="form-group row justify-content-between">
+                    <button className="btn btn-gray mr-3 col-md-12 mb-3 col-lg-4">SALVA PER DOPO</button>
+                    <button className="btn btn-gray mr-3 col-md-12 mb-3 col-lg-3">INDIETRO</button>
+                    <button className="btn btn-color px-4 col-md-12 mb-3 col-lg-3">AVANTI</button>
                 </div>
-            </div>
-        </form >
+            </form >
         </>
     )
 }

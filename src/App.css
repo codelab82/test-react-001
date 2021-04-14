@@ -4,10 +4,10 @@
   border: solid 1px #3E3E3E;
   border-radius: 20px;
 }
-.btn-red{
+.btn-color{
   color: white;
-  background-color: #FF0000;
-  border: solid 1px #FF0000;
+  background-color: #2e8eae;
+  border: solid 1px #2e8eae;
   border-radius: 20px;
 }
 /*.App {

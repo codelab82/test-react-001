@@ -15,19 +15,19 @@ const App = () => {
   return (
     <div className="App">
       <NavBar/>
-      <SelAnagrafica/>
-      {/*<div className="container">
+      {/* <SelAnagrafica/> */}
+      <div className="container">
         <Header/>
         <div className="row justify-content-between">
-            <div className="col-8" >
+            <div className="col-lg-8 col-md-8 col-12" >
               <DatiRichiedente />
             </div>
-            <div className="col-3 border">
+            <div className="col-lg-3 col-md-4">
               <AsideDx />
             </div>
         </div>
       </div>
-      <header className="App-header">
+      {/*<header className="App-header">
          <img src={logo} className="App-logo" alt="logo" /> 
         <Otp />
         <br/>

@@ -6,15 +6,15 @@ import PAYPERDRYVE from '../../images/PAYPERDRIVE.png';
 
 const AsideDx = () => {
     return (
-        <>
+        <div className="border p-3 aside d-md-block d-none">
             <div className="row box">
                 <img src={PAYPERDRYVE} alt="logo" className="logo-payperdrive"/>
-                <h5 className="mt-3 ml-3">Toyota Yaris Hybrid</h5>
+                <h5 className="ml-3">Toyota Yaris Hybrid</h5>
                 <img src={macchina} alt="macchina" className="img" />
             </div>
             <div className="row">
-                <p className=" ml-3">
-                    <i className="far fa-user"></i>&nbsp;&nbsp;
+                <p className="user-info mt-3 ml-3">
+                    <i className="far fa-user" style={{fontSize: '1.3em'}}></i>&nbsp;&nbsp;
                     <strong>Alfredo Porti</strong><br/>
                     Proposta numero: <strong>36588741</strong>
                 </p>
@@ -30,9 +30,9 @@ const AsideDx = () => {
             </div>
             <div className="row">
                 <p className="ml-3 info-text">
-                    <i className="fas fa-fire-alt mb-2" style={{ color: '#FF0000' }}></i>&nbsp;&nbsp;
+                    <i className="fas fa-fire-alt mb-2" style={{ color: '#2e8eae' }}></i>&nbsp;&nbsp;
                     Furto Incendio (Pacchetto Blu)<br />
-                    <i className="fas fa-unlock-alt mb-2" style={{ color: '#FF0000' }}></i>&nbsp;&nbsp;
+                    <i className="fas fa-unlock-alt mb-2" style={{ color: '#2e8eae' }}></i>&nbsp;&nbsp;
                     Securmark 8<br />
                     <i className="fas fa-unlock-alt" style={{ color: '#D1DCEB' }}></i>&nbsp;&nbsp;
                     <span style={{ color: '#D1DCEB' }}>Protezione Persona</span>
@@ -45,12 +45,12 @@ const AsideDx = () => {
                 <img src={icona} alt="icona" className="icona" />
             </div>
             <div className="row">
-                <p className="h6 ml-3 mb-3">Hai bisogno di assistenza?<br />
+                <p className="help-text ml-3 mb-3"><strong>Hai bisogno di assistenza?</strong><br />
                     <i className="fas fa-phone"></i>&nbsp;&nbsp;
                     <span style={{color: '#707070'}}>06 505 249 23</span>
                 </p>
             </div>
-        </>
+        </div>
     )
 }
 
