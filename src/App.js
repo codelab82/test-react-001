@@ -13,21 +13,21 @@ import NavBar from './components/NavBar/NavBar';
 const App = () => {
 
   return (
-    <div className="App">
-      <NavBar/>
-      {/* <SelAnagrafica/> */}
+    <div className="container-app">
+      <NavBar />
+      {/* <SelAnagrafica/>  */}
       <div className="container">
-        <Header/>
+        <Header />
         <div className="row justify-content-between">
-            <div className="col-lg-8 col-md-8 col-12" >
-              <DatiRichiedente />
-            </div>
-            <div className="col-lg-3 col-md-4">
-              <AsideDx />
-            </div>
+          <div className="col-lg-8 col-md-8 col-12" >
+            <DatiRichiedente />
+          </div>
+          <div className="col-lg-3 col-md-4">
+            <AsideDx />
+          </div>
         </div>
       </div>
-      {/*<header className="App-header">
+      {/*   <header className="App-header">
          <img src={logo} className="App-logo" alt="logo" /> 
         <Otp />
         <br/>

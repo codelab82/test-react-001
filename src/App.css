@@ -1,10 +1,10 @@
-.btn-gray{
+.container-app .btn-gray{
   color: #3E3E3E;
   background-color: white;
   border: solid 1px #3E3E3E;
   border-radius: 20px;
 }
-.btn-color{
+.container-app .btn-color{
   color: white;
   background-color: #2e8eae;
   border: solid 1px #2e8eae;

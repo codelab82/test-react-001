@@ -75,7 +75,7 @@ const DatiRichiedente = () => {
     }
 
     return (
-        <>
+        <div className="dati-richiedente">
             <h5 className="mb-4 border-bottom pb-2 text-color">Dati del richiedente</h5>
             <form>
                 <div className="form-group row justify-content-between">
@@ -160,7 +160,7 @@ const DatiRichiedente = () => {
                     <button className="btn btn-color px-4 col-md-12 mb-3 col-lg-3">AVANTI</button>
                 </div>
             </form >
-        </>
+        </div>
     )
 }
 

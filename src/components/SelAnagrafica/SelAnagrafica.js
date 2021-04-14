@@ -3,7 +3,7 @@ import './SelAnagrafica.css';
 
 const SelAnagrafica = () => {
     return (
-        <>
+        <div className="sel-anagrafica">
             <div className="container">
                 <h5 className="text-color border-bottom">Selezionare tipo di anagrafica</h5>
                 <div className="row mt-5 justify-content-around">
@@ -36,7 +36,7 @@ const SelAnagrafica = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

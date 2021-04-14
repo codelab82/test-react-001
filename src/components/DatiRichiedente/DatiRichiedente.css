@@ -1,23 +1,23 @@
-input:focus, select:focus{
+.dati-richiedente input:focus, select:focus{
     outline:0px !important;
     -webkit-appearance:none;
     box-shadow: none !important; 
 }
-.text-color{
+.dati-richiedente .text-color{
     color:#2e8eae;
 }
-.fa-info-circle{
+.dati-richiedente .fa-info-circle{
     font-size: 2em;
 }
-.info-text{
+.dati-richiedente .info-text{
     font-size: 0.6em!important;
     text-align: center;
 }
-.avatar{
+.dati-richiedente .avatar{
     width: 20%!important;
     /* margin: 0 auto; */
 }  
-  .form-control {
+.dati-richiedente .form-control {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -26,42 +26,39 @@ input:focus, select:focus{
     border: none;
     border-bottom: 1px solid #d9d9d9;
     background-color: transparent;
-  }
-  .form-control + label {
+}
+.dati-richiedente .form-control + label {
     position: absolute;
     top: 10px;
     font-size: 16px;
     color: #999999;
     transition: all 0.2s ease-out;
-  }
-  .form-control+.active{
+}
+.dati-richiedente .form-control+.active{
     top: -15px;
     font-size: 12px;
-  }
-  .form-control:focus {
+}
+.dati-richiedente .form-control:focus {
     outline: none;
     border-width: 2px;
     border-color: #2e8eae;
     transition: all 0.2s ease-out;
-  }
-  .form-control:focus + label, .form-control.has-value + label {
+}
+.dati-richiedente .form-control:focus + label, .form-control.has-value + label {
     top: -15px;
     color: #2e8eae;
     font-size: 12px;
-   }
-  /*.form-control.has-value:not(:focus) + label {
-    color: #999999;
-  } */
-  @media (min-width: 768px) { 
-    .avatar{
+}
+@media (min-width: 768px) { 
+  .dati-richiedente .avatar{
       width: 15%!important;
     }
 }
 @media (min-width: 992px) { 
-    .avatar{
+  .dati-richiedente .avatar{
       width: 10%!important;
     }
-    .info-text{
+    .dati-richiedente .info-text{
       font-size: 0.7em!important;
       text-align: left;
   }
