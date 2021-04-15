@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
     return (
         <div className="step-header">
-            <div className="d-none d-lg-block border-bottom mb-5">
+            <div className="d-none d-lg-block border-bottom alig-items-center">
                 <ul className="breadcrumbs">
                     <li className="step">
                         <span className="step-number-check border rounded-circle mr-3"><i className="fas fa-check"></i></span>
@@ -28,7 +28,7 @@ const Header = () => {
                     </li>
                 </ul>
             </div>
-            <div className="d-block d-lg-none border-bottom mb-5">
+            <div className="d-block d-lg-none border-bottom">
                 <ul className="breadcrumbs">
                     <li className="step">
                         <span className="step-number-check border rounded-circle mr-3"><i className="fas fa-check"></i></span>

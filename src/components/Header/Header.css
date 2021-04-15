@@ -1,3 +1,11 @@
+.step-header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 999999;
+    box-sizing: border-box;
+    padding: 10px 0 0 0;
+}
 .step-header ul{
     list-style-type: none;
     display: flex;

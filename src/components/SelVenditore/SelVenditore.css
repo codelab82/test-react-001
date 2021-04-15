@@ -1,0 +1,65 @@
+.sel-venditore input:focus, select:focus{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important; 
+}
+.sel-venditore .text-color{
+    color:#2e8eae;
+}
+.sel-venditore .fa-info-circle{
+    font-size: 2em;
+}
+.sel-venditore .info-text{
+    font-size: 0.6em!important;
+    text-align: center;
+}
+.sel-venditore .avatar{
+    width: 20%!important;
+    /* margin: 0 auto; */
+}  
+.sel-venditore .form-control {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+    background-color: transparent;
+}
+.sel-venditore .form-control + label {
+    position: absolute;
+    top: 10px;
+    font-size: 16px;
+    color: #999999;
+    transition: all 0.2s ease-out;
+}
+.sel-venditore .form-control+.active{
+    top: -15px;
+    font-size: 12px;
+}
+.sel-venditore .form-control:focus {
+    outline: none;
+    border-width: 2px;
+    border-color: #2e8eae;
+    transition: all 0.2s ease-out;
+}
+.sel-venditore .form-control:focus + label, .form-control.has-value + label {
+    top: -15px;
+    color: #2e8eae;
+    font-size: 12px;
+}
+@media (min-width: 768px) { 
+  .sel-venditore .avatar{
+      width: 15%!important;
+    }
+}
+@media (min-width: 992px) { 
+  .sel-venditore .avatar{
+      width: 10%!important;
+    }
+    .sel-venditore .info-text{
+      font-size: 0.7em!important;
+      text-align: left;
+  }
+}

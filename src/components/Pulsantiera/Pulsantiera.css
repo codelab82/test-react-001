@@ -1,0 +1,31 @@
+.pulsantiera{
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 9999999;
+    background-color: #2e8eae;
+    /* background-color: white; */
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    top: 0;
+    bottom: 20px;
+}
+.pulsantiera .text-link a i{
+    font-size: 1em;
+}
+.pulsantiera .text-link a{
+    text-decoration: none;
+    color: white;
+    /* color: #2e8eae; */
+}
+.pulsantiera .text-link a:hover{
+    color: #707070;
+}
+.pulsantiera .text-link a span{
+    font-size: .7em;
+}
+@media (min-width: 992px) { 
+    .pulsantiera .text-link a i{
+        font-size: 1.3em;
+    }
+ }

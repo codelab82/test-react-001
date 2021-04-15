@@ -38,7 +38,7 @@ const AsideDx = () => {
                     <span style={{ color: '#D1DCEB' }}>Protezione Persona</span>
                 </p>
             </div>
-            <div className="row justify-content-center">
+            {/* <div className="row justify-content-center">
                 <button type="button" className="btn btn-gray">SWITCH DEVICE</button>
             </div>
             <div className="row my-4">
@@ -49,7 +49,7 @@ const AsideDx = () => {
                     <i className="fas fa-phone"></i>&nbsp;&nbsp;
                     <span style={{color: '#707070'}}>06 505 249 23</span>
                 </p>
-            </div>
+            </div> */}
         </div>
     )
 }

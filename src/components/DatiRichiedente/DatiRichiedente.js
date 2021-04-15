@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './DatiRichiedente.css';
 import avatar from '../../images/avatar.png';
+import SelVenditore from '../SelVenditore/SelVenditore';
+import DatiAggiuntiviRichiedente from '../DatiAggiuntiviRichiedente/DatiAggiuntiviRichiedente';
 
 const DatiRichiedente = () => {
 
@@ -75,7 +77,8 @@ const DatiRichiedente = () => {
     }
 
     return (
-        <div className="dati-richiedente">
+        <div className="dati-richiedente mt-5">
+            <SelVenditore />
             <h5 className="mb-4 border-bottom pb-2 text-color">Dati del richiedente</h5>
             <form>
                 <div className="form-group row justify-content-between">
@@ -148,6 +151,7 @@ const DatiRichiedente = () => {
                         <label className={isActiveEmail ? 'active' : ''}>Email *</label>
                     </div>
                 </div>
+                <DatiAggiuntiviRichiedente />
                 <div className="form-group row mt-5">
                     <p className="font-weight-bold info-text">* campi obbligatori</p>
                 </div>

@@ -9,6 +9,7 @@ import DatiRichiedente from './components/DatiRichiedente/DatiRichiedente';
 import AsideDx from './components/AsideDx/AsideDx';
 import SelAnagrafica from './components/SelAnagrafica/SelAnagrafica';
 import NavBar from './components/NavBar/NavBar';
+import Pulsantiera from './components/Pulsantiera/Pulsantiera';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
       <NavBar />
       {/* <SelAnagrafica/>  */}
       <div className="container">
+          <Pulsantiera/>
         <Header />
         <div className="row justify-content-between">
           <div className="col-lg-8 col-md-8 col-12" >
@@ -26,6 +28,7 @@ const App = () => {
             <AsideDx />
           </div>
         </div>
+         {/* <Pulsantiera/>  */}
       </div>
       {/*   <header className="App-header">
          <img src={logo} className="App-logo" alt="logo" /> 
