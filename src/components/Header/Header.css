@@ -24,5 +24,7 @@
 
 a span.step-link {
     color: #2e8eae;
-    text-decoration: underline;;
+}
+.step-header i{
+    font-size: 1.8em;
 }
