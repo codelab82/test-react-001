@@ -1,14 +1,14 @@
 .caricamento-documenti h5{
     background-color: #D1DCEB;
 }
-.caricamento-documenti h2 span, i{
+.caricamento-documenti h2 span, .caricamento-documenti i{
  color: #2e8eae;
 }
 .caricamento-documenti .card{
     width: 95%;
     margin: auto;
 }
-.caricamento-documenti .fa-info-circle,.fa-download, .fa-trash-alt{
+.caricamento-documenti .fa-info-circle,.caricamento-documenti .fa-download, .caricamento-documenti .fa-trash-alt{
     color: #D1DCEB;
     font-size: 1.3em;
     cursor: pointer;

@@ -85,7 +85,7 @@ const DatiRichiedenteV3 = () => {
             <span className="mini-pulsantiera">
             <i className="fas fa-search mx-2 icon" title="Seleziona cliente"></i>&nbsp;
             <i className="fas fa-sync-alt mx-2 icon" title="Inverti richiedente / garante"></i>&nbsp;
-            <i className="far fa-trash-alt mx-2 icon" title="Pulisci anagrafica richidente"></i>&nbsp;</span>
+            <i className="far fa-trash-alt mx-2 icon" title="Pulisci anagrafica richiedente"></i>&nbsp;</span>
             </div>
             <form>
                 <div className="row">

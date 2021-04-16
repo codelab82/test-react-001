@@ -13,6 +13,7 @@ import Pulsantiera from './components/Pulsantiera/Pulsantiera';
 import MascheraAnagrafica from './components/MascheraAnagrafica/MascheraAnagrafica';
 import MascheraAnagraficaV2 from './components/MascheraAnagrafica/MascheraAnagraficaV2';
 import MascheraAnagraficaV3 from './components/MascheraAnagrafica/MascheraAnagraficaV3';
+import CaricamentoDocumenti from './components/CaricamentoDocumenti/CaricamentoDocumenti';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
     <div className="container-app">
       {/* <SelAnagrafica/>  */}
       <MascheraAnagraficaV3 />
+      {/* <CaricamentoDocumenti /> */}
       {/*   <header className="App-header">
          <img src={logo} className="App-logo" alt="logo" /> 
         <Otp />

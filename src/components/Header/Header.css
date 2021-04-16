@@ -28,3 +28,6 @@ a span.step-link {
 .step-header i{
     font-size: 1.8em;
 }
+.step-header i {
+    color: #2e8eae;
+}

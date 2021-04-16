@@ -19,7 +19,7 @@ export function PulsantieraRichiedente() {
                 <div className="text-center col-12 my-2">
                     <a href="/">
                         <i className="far fa-trash-alt"></i><br/>
-                        <span className="d-md-block d-none">Pulisci anagrafica richidente</span>
+                        <span className="d-md-block d-none">Pulisci anagrafica richiedente</span>
                     </a>
                 </div>
                 <div className="text-center col-12 my-2">

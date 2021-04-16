@@ -26,7 +26,7 @@ const Pulsantiera = () =>{
                 <div className="text-center col">
                     <a href="/">
                         <i className="far fa-trash-alt"></i><br/>
-                        <span className="d-md-block d-none">Pulisci anagrafica richidente</span>
+                        <span className="d-md-block d-none">Pulisci anagrafica richiedente</span>
                     </a>
                 </div>
                 <div className="text-center col">
