@@ -112,7 +112,7 @@ const DatiAggiuntiviRichiedente = () => {
                 <div className="col-12 info-text col-lg-11">
                     <strong>La provincia ed il CAP non possono essere modificati in seguito alla selezione del servizio Furto e Incendio</strong><br />
                 </div>
-            </div><br className="d-md-block d-none" />
+            </div>
             <div className="form-group row justify-content-between">
                 <div className="col-md-6 col-12 mb-4 mb-md-1">
                     <input type="text" className="form-control" value={via} onChange={(e) => onChangeVia(e.target.value)} />
@@ -122,7 +122,7 @@ const DatiAggiuntiviRichiedente = () => {
                     <input type="text" className="form-control" value={civico} onChange={(e) => onChangeCivico(e.target.value)} />
                     <label className={isActiveCivico ? 'active' : ''}>Civico *</label>
                 </div>
-            </div><br className="d-md-block d-none" />
+            </div>
             <div className="form-group row justify-content-between">
                 <div className=" col-md-6 col-12 mb-4 mb-md-1">
                     <input type="text" className="form-control" value={provRes} onChange={(e) => onChangeProvRes(e.target.value)} />
@@ -132,7 +132,7 @@ const DatiAggiuntiviRichiedente = () => {
                     <input type="text" className="form-control" value={comuneRes} onChange={(e) => onChangeComuneRes(e.target.value)} />
                     <label className={isActiveComuneRes ? 'active' : ''}>Comune di residenza *</label>
                 </div>
-            </div><br className="d-md-block d-none" />
+            </div>
             <div className="form-group row justify-content-between">
                 <div className=" col-md-6 col-12 mb-4 mb-md-1">
                     <input type="text" className="form-control" value={CAP} onChange={(e) => onChangeCAP(e.target.value)} />
@@ -142,7 +142,7 @@ const DatiAggiuntiviRichiedente = () => {
                     <input type="text" className="form-control" value={prov} onChange={(e) => onChangeProv(e.target.value)} />
                     <label className={isActiveProv ? 'active' : ''}>Provincia di nascita *</label>
                 </div>
-            </div><br className="d-md-block d-none" />
+            </div>
             <div className="form-group row justify-content-between">
                 <div className=" col-md-6 col-12 mb-4 mb-md-1">
                     <input type="text" className="form-control" value={comune} onChange={(e) => onChangeComune(e.target.value)} />
@@ -167,7 +167,7 @@ const DatiAggiuntiviRichiedente = () => {
                     <input type="text" className="form-control" value={Numero} onChange={(e) => onChangeNumero(e.target.value)} />
                     <label className={isActiveNumero ? 'active' : ''}>Numero documento *</label>
                 </div>
-            </div><br className="d-md-block d-none" />
+            </div>
             <div className="form-group row justify-content-between">
                 <div className=" col-md-6 col-12 mb-4 mb-md-1">
                     <input type="text" className="form-control" value={DataEmiss} onChange={(e) => onChangeDataEmiss(e.target.value)} />
@@ -177,7 +177,7 @@ const DatiAggiuntiviRichiedente = () => {
                     <input type="text" className="form-control" value={EmissProv} onChange={(e) => onChangeEmissProv(e.target.value)} />
                     <label className={isActiveEmissProv ? 'active' : ''}>Luogo di emissione (provincia) *</label>
                 </div>
-            </div><br className="d-md-block d-none" />
+            </div>
             <div className="form-group row justify-content-between">
                 <div className=" col-md-6 col-12 mb-4 mb-md-1">
                     <input type="text" className="form-control" value={EmissCom} onChange={(e) => onChangeEmissCom(e.target.value)} />
@@ -187,7 +187,7 @@ const DatiAggiuntiviRichiedente = () => {
                     <input type="text" className="form-control" value={DataScad} onChange={(e) => onChangeDataScad(e.target.value)} />
                     <label className={isActiveDataScad ? 'active' : ''}>Data di scadenza *</label>
                 </div>
-            </div><br className="d-md-block d-none" />
+            </div>
             <div className="form-group row justify-content-between">
                 <div className=" col-md-6 col-12 mb-4 mb-md-1">
                     <input type="text" className="form-control" value={Rilasciato} onChange={(e) => onChangeRilasciato(e.target.value)} />
