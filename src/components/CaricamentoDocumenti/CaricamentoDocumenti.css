@@ -1,25 +1,37 @@
 .caricamento-documenti h5{
     background-color: #D1DCEB;
 }
+.caricamento-documenti h2 span, i{
+ color: #2e8eae;
+}
 .caricamento-documenti .card{
     width: 95%;
     margin: auto;
 }
-.caricamento-documenti .fa-info-circle,.fa-download{
+.caricamento-documenti .fa-info-circle,.fa-download, .fa-trash-alt{
     color: #D1DCEB;
     font-size: 1.3em;
     cursor: pointer;
 }
- .carta-identità, .passaporto, .patente, .tessera-sanitaria{
+ .carta-identità, .passaporto, .patente, .tessera-sanitaria, .patente{
     border: dotted 1px #BEBEBE;
     background-color: #F7F7F7;
 }
 .caricamento-documenti .btn-small{
-    background-color: #FF0000;
+    background-color: #2e8eae;
     color: white;
     border-radius: 20px;
 }
 .caricamento-documenti .btn-small:hover{
     background-color: #F7F7F7;
-    color: #FF0000;
+    color: #2e8eae;
+}
+.caricamento-documenti .trascina{
+    font-size: .5em;
+    color: #2e8eae;
+    font-weight: bold;
+}
+.caricamento-documenti select{
+    display: inline;
+    width: 150px;
 }
