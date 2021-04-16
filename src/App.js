@@ -10,26 +10,15 @@ import AsideDx from './components/AsideDx/AsideDx';
 import SelAnagrafica from './components/SelAnagrafica/SelAnagrafica';
 import NavBar from './components/NavBar/NavBar';
 import Pulsantiera from './components/Pulsantiera/Pulsantiera';
+import MascheraAnagrafica from './components/MascheraAnagrafica/MascheraAnagrafica';
+import MascheraAnagraficaV2 from './components/MascheraAnagrafica/MascheraAnagraficaV2';
 
 const App = () => {
 
   return (
     <div className="container-app">
-      <NavBar />
       {/* <SelAnagrafica/>  */}
-      <div className="container">
-          <Pulsantiera/>
-        <Header />
-        <div className="row justify-content-between">
-          <div className="col-lg-8 col-md-8 col-12" >
-            <DatiRichiedente />
-          </div>
-          <div className="col-lg-3 col-md-4">
-            <AsideDx />
-          </div>
-        </div>
-         {/* <Pulsantiera/>  */}
-      </div>
+      <MascheraAnagraficaV2 />
       {/*   <header className="App-header">
          <img src={logo} className="App-logo" alt="logo" /> 
         <Otp />

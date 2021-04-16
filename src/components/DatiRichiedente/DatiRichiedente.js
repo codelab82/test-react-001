@@ -152,7 +152,7 @@ const DatiRichiedente = () => {
                     </div>
                 </div>
                 <DatiAggiuntiviRichiedente />
-                <div className="form-group row mt-5">
+                {/* <div className="form-group row mt-5">
                     <p className="font-weight-bold info-text">* campi obbligatori</p>
                 </div>
                 <div className="form-group row">
@@ -162,7 +162,7 @@ const DatiRichiedente = () => {
                     <button className="btn btn-gray mr-3 col-md-12 mb-3 col-lg-4">SALVA PER DOPO</button>
                     <button className="btn btn-gray mr-3 col-md-12 mb-3 col-lg-3">INDIETRO</button>
                     <button className="btn btn-color px-4 col-md-12 mb-3 col-lg-3">AVANTI</button>
-                </div>
+                </div> */}
             </form >
         </div>
     )

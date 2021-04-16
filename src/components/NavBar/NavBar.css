@@ -3,6 +3,7 @@
 }
 .navbar{
     background-color: #2e8eae;
+    padding: 0;
 }
 @media (min-width: 768px) { 
     .logo-toyota{
@@ -18,4 +19,9 @@
     .logo-toyota{
         width: 15%;
     }
+  }
+
+  .navbar .convenzione span.convenzione-text,
+  .navbar .convenzione a.nav-link {
+      color: #fff;
   }

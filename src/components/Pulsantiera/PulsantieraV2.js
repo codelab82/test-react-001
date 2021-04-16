@@ -1,9 +1,9 @@
 import React from 'react';
 import './Pulsantiera.css';
 
-const Pulsantiera = () =>{
+const PulsantieraV2 = () =>{
     return(
-        <div className="pulsantiera sticky mb-5">
+        <div className="pulsantiera  mb-5">
             <div className="row text-link">
                 <div className="text-center col">
                     <a href="/">
@@ -46,4 +46,4 @@ const Pulsantiera = () =>{
     )
 }
 
-export default Pulsantiera;
+export default PulsantieraV2;

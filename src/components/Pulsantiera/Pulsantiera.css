@@ -1,12 +1,13 @@
-.pulsantiera{
+.pulsantiera {
     box-sizing: border-box;
     padding: 10px;
     border-radius: 10px;
-    z-index: 9999999;
     background-color: #2e8eae;
-    /* background-color: white; */
+}
+.pulsantiera.sticky {
     position: sticky;
     position: -webkit-sticky; /* Safari */
+    z-index: 9999999;
     top: 0;
     bottom: 20px;
 }
