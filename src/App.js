@@ -10,6 +10,7 @@ import AsideDx from './components/AsideDx/AsideDx';
 import SelAnagrafica from './components/SelAnagrafica/SelAnagrafica';
 import NavBar from './components/NavBar/NavBar';
 import Pulsantiera from './components/Pulsantiera/Pulsantiera';
+import CaricamentoDocumenti from './components/CaricamentoDocumenti/CaricamentoDocumenti';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
         <Header />
         <div className="row justify-content-between">
           <div className="col-lg-8 col-md-8 col-12" >
+            <CaricamentoDocumenti/>
             <DatiRichiedente />
           </div>
           <div className="col-lg-3 col-md-4">
