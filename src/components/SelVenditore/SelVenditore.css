@@ -49,6 +49,10 @@
     color: #2e8eae;
     font-size: 12px;
 }
+.sel-venditore .radio.icheck-tfs > input:first-child:checked+label::before {
+    background-color: #2e8eae;
+    border-color: #2e8eae;
+}
 @media (min-width: 768px) { 
   .sel-venditore .avatar{
       width: 15%!important;

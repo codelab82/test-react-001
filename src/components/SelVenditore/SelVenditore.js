@@ -8,8 +8,8 @@ const SelVenditore = () => {
     const [anagrafica, setAnagrafica] = useState('');
     const [venditore, setVenditore] = useState('');
 
-    const [selectedOption, setSelectedOption] = useState('option1')
-    const [selectedOption2, setSelectedOption2] = useState('option3')
+    const [selectedOption, setSelectedOption] = useState('salone')
+    const [selectedOption2, setSelectedOption2] = useState('salone')
 
     const onChangeAnagrafica = (value) => {
         setAnagrafica(value);
@@ -51,7 +51,15 @@ const SelVenditore = () => {
                     <div className="col-md-6 col-12 mb-4 mb-md-1">
                         <label>Tipo vendita *</label>
                         <div className=" row justify-content-start">
-                            <div className="form-check">
+                            <div class="radio icheck-tfs form-check">
+                                <input type="radio" name="tipo_vendita" id="tipo_vendita_salone" value="salone" checked={selectedOption === 'salone'} onChange={handleOptionChange} />
+                                <label for="tipo_vendita_salone">In salone</label>
+                            </div>
+                            <div class="radio icheck-tfs form-check">
+                                <input type="radio" name="tipo_vendita" id="tipo_vendita_distanza" value="distanza" checked={selectedOption === 'distanza'} onChange={handleOptionChange} />
+                                <label for="tipo_vendita_distanza">A distanza</label>
+                            </div>
+                            {/* <div className="form-check">
                                 <label>
                                     <input type="radio" value="option1" checked={selectedOption === 'option1'}
                                         onChange={handleOptionChange}
@@ -66,13 +74,21 @@ const SelVenditore = () => {
                                     />
                             A distanza
                             </label>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="col-md-6 col-12 mb-3 mb-md-1">
                         <label>Canale vendita vettura*</label>
                         <div className=" row justify-content-start">
-                            <div className="form-check">
+                            <div class="radio icheck-tfs form-check">
+                                <input type="radio" name="canale_vendita" id="canale_vendita_salone" value="salone" checked={selectedOption2 === 'salone'} onChange={handleOptionChange2} />
+                                <label for="canale_vendita_salone">In salone</label>
+                            </div>
+                            <div class="radio icheck-tfs form-check">
+                                <input type="radio" name="canale_vendita" id="canale_vendita_distanza" value="distanza" checked={selectedOption2 === 'distanza'} onChange={handleOptionChange2} />
+                                <label for="canale_vendita_distanza">A distanza</label>
+                            </div>
+                            {/* <div className="form-check">
                                 <label>
                                     <input type="radio" value="option3" checked={selectedOption2 === 'option3'}
                                         onChange={handleOptionChange2}
@@ -87,7 +103,7 @@ const SelVenditore = () => {
                                     />
                             A distanza
                         </label>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

@@ -12,13 +12,14 @@ import NavBar from './components/NavBar/NavBar';
 import Pulsantiera from './components/Pulsantiera/Pulsantiera';
 import MascheraAnagrafica from './components/MascheraAnagrafica/MascheraAnagrafica';
 import MascheraAnagraficaV2 from './components/MascheraAnagrafica/MascheraAnagraficaV2';
+import MascheraAnagraficaV3 from './components/MascheraAnagrafica/MascheraAnagraficaV3';
 
 const App = () => {
 
   return (
     <div className="container-app">
       {/* <SelAnagrafica/>  */}
-      <MascheraAnagraficaV2 />
+      <MascheraAnagraficaV3 />
       {/*   <header className="App-header">
          <img src={logo} className="App-logo" alt="logo" /> 
         <Otp />

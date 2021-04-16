@@ -53,9 +53,9 @@ const AsideDxV2 = () => {
                 </p>
             </div> */}
         </div>
-        <div className="p-3 aside d-md-block d-none">
+        {/* <div className="p-3 aside d-md-block d-none">
             <PulsantieraMascheraV2 />
-        </div>
+        </div> */}
         </>
     )
 }

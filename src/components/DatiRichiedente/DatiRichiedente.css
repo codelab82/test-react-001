@@ -50,6 +50,22 @@
     color: #2e8eae;
     font-size: 12px;
 }
+
+.dati-richiedente .title {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.dati-richiedente .mini-pulsantiera {
+    float: right;
+}
+
+.dati-richiedente .mini-pulsantiera .icon {
+    cursor: pointer;
+}
+
 @media (min-width: 768px) { 
   .dati-richiedente .avatar{
       width: 15%!important;
