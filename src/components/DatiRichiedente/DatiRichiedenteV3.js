@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './DatiRichiedente.css';
 import avatar from '../../images/avatar.png';
 import SelVenditore from '../SelVenditore/SelVenditore';
@@ -6,6 +6,10 @@ import DatiAggiuntiviRichiedente from '../DatiAggiuntiviRichiedente/DatiAggiunti
 import { PulsantieraRichiedente, PulsantieraContatti } from './PulsantieraRichiedente';
 
 const DatiRichiedenteV3 = () => {
+
+    useEffect(() => {
+        ga('send', 'begin_checkout');
+    })
 
     const [isActiveCognome, setIsActiveCognome] = useState(false);
     const [isActiveNome, setIsActiveNome] = useState(false);
