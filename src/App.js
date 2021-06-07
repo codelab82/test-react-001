@@ -35,6 +35,7 @@ const App = () => {
         <PictureTaker /> 
       </header>
       <DataTableComponent/>*/}
+      <button type="button" onClick={() => ReactGA.ga('send', 'begin_checkout')}>Click me</button>
     </div>
   );
 }
