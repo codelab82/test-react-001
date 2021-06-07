@@ -14,8 +14,11 @@ import MascheraAnagrafica from './components/MascheraAnagrafica/MascheraAnagrafi
 import MascheraAnagraficaV2 from './components/MascheraAnagrafica/MascheraAnagraficaV2';
 import MascheraAnagraficaV3 from './components/MascheraAnagrafica/MascheraAnagraficaV3';
 import CaricamentoDocumenti from './components/CaricamentoDocumenti/CaricamentoDocumenti';
+import ReactGA from 'react-ga';
 
 const App = () => {
+
+  ReactGA.initialize('G-VZWGJCMCK3');
 
   return (
     <div className="container-app">

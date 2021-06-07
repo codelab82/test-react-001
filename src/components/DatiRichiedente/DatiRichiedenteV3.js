@@ -5,11 +5,13 @@ import SelVenditore from '../SelVenditore/SelVenditore';
 import DatiAggiuntiviRichiedente from '../DatiAggiuntiviRichiedente/DatiAggiuntiviRichiedente';
 import { PulsantieraRichiedente, PulsantieraContatti } from './PulsantieraRichiedente';
 
+import ReactGA from 'react-ga';
+
 const DatiRichiedenteV3 = () => {
 
     useEffect(() => {
-        ga('send', 'begin_checkout');
-    })
+        ReactGA.pageview('/dati_richiedente');
+    }, [])
 
     const [isActiveCognome, setIsActiveCognome] = useState(false);
     const [isActiveNome, setIsActiveNome] = useState(false);
@@ -192,6 +194,8 @@ const DatiRichiedenteV3 = () => {
                     <button className="btn btn-gray mr-3 col-md-12 mb-3 col-lg-3">INDIETRO</button>
                     <button className="btn btn-color px-4 col-md-12 mb-3 col-lg-3">AVANTI</button>
                 </div> */}
+
+                <button type="button" onClick={() => ReactGA.ga('send', 'begin_checkout')}>Click me</button>
             </form >
         </div>
     )
